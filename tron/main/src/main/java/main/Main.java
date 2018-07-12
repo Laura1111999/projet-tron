@@ -13,21 +13,15 @@ import view.ViewFacade;
  * @version 1.0
  */
 public abstract class Main {
+	
 
-    /**
-     * The main method.
-     *
-     * @param args
-     *            the arguments
-     */
     public static void main(final String[] args) {
         final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
-
+        
         try {
             controller.start();
         } catch (final SQLException exception) {
             exception.printStackTrace();
         }
     }
-
 }
